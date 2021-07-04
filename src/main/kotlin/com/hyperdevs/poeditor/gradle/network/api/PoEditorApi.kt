@@ -19,7 +19,9 @@
 package com.hyperdevs.poeditor.gradle.network.api
 
 import retrofit2.Call
-import retrofit2.http.*
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.POST
 
 /**
  * API declaration of PoEditor endpoints used in the app.
@@ -44,6 +46,7 @@ interface PoEditorApi {
                           @Field("id") id: Int,
                           @Field("action") action: String = "export",
                           @Field("type") type: String,
+                          @Field("filters") filters: String,
                           @Field("language") language: String,
                           @Field("tags") tags: String?): Call<ExportResponse>
 }

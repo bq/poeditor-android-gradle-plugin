@@ -98,6 +98,7 @@ object PoEditorStringsImporter {
                 val translationFileUrl = poEditorApiController.getTranslationFileUrl(
                     projectId = projectId,
                     code = languageCode,
+                    filters = "translated",
                     type = "android_strings",
                     tags = tags)
 
